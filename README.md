@@ -25,7 +25,6 @@
 Steps to get started:
 1. Find and replace the string `tstemplate` in the project folder with your repository name to get started quickly.
 2. rename `./tstemplate.ts` and `./tests/tstemplate.test.ts`, and replace `tstemplate` with your repository name
-3. 
 
 ## Install
 
