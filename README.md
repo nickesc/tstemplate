@@ -23,6 +23,16 @@
 ## About `tstemplate`
 
 To get started:
+
+### Automatic
+
+In a command prompt, replace `PROJECT_NAME` with your project's name and run:
+```sh
+curl -s https://raw.githubusercontent.com/nickesc/tstemplate/refs/heads/main/init.sh | bash /dev/stdin PROJECT_NAME
+```
+
+### Manual
+
 1. Clone this repository:
 
    ```sh
