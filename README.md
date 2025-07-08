@@ -1,7 +1,7 @@
 <h3 align="center" >
   <div>
     <a href="https://github.com/nickesc/tstemplate"><img alt="Source: Github" src="https://img.shields.io/badge/source-github-brightgreen?style=for-the-badge&logo=github&labelColor=%23505050"></a>
-    <a href="https://github.com/nickesc/tstemplate/actions/workflows/tstemplate-ts-tests.yml"><img alt="Tests: github.com/nickesc/tstemplate/actions/workflows/tstemplate-ts-tests.yml" src="https://img.shields.io/github/actions/workflow/status/nickesc/tstemplate/tstemplate-ts-tests.yml?logo=github&label=tests&logoColor=white&style=for-the-badge&labelColor=%23505050"></a>
+    <a href="https://github.com/nickesc/tstemplate/actions/workflows/ts-tests.yml"><img alt="Tests: github.com/nickesc/tstemplate/actions/workflows/ts-tests.yml" src="https://img.shields.io/github/actions/workflow/status/nickesc/tstemplate/ts-tests.yml?logo=github&label=tests&logoColor=white&style=for-the-badge&labelColor=%23505050"></a>
     <br>
     <a href="https://www.npmjs.com/package/tstemplate"><img alt="NPM: npmjs.com/package/tstemplate" src="https://img.shields.io/npm/v/tstemplate?style=for-the-badge&logo=npm&logoColor=white&label=npm&color=%23C12127&labelColor=%23505050"></a>
   </div>
