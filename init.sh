@@ -8,13 +8,8 @@ fi
 
 PROJECT_NAME="$1"
 
-if ! git clone https://github.com/nickesc/tstemplate.git; then
+if ! git clone https://github.com/nickesc/tstemplate.git ./"$PROJECT_NAME"; then
     echo "Error: Failed to clone repository"
-    exit 1
-fi
-
-if ! mv ./tstemplate ./"$PROJECT_NAME"; then
-    echo "Error: Failed to rename project folder"
     exit 1
 fi
 
