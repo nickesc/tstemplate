@@ -35,15 +35,12 @@ To get started:
    PROJECT_NAME=replace_with_project_name
    ```
 
-3. Rename `tstemplate.ts` and `tests/tstemplate.test.ts`, and the folder:
+3. Rename `testproject.ts` and `tests/testproject.test.ts`, and the folder:
    
    ```sh
-   mv ./tstemplate ./$PROJECT_NAME
-   cd ./$PROJECT_NAME
-
-   mv ./tstemplate.ts ./$PROJECT_NAME.ts
-   mv ./tests/tstemplate.test.ts ./tests/$PROJECT_NAME.test.ts
-   
+   mv ./testproject ./$PROJECT_NAME && cd ./$PROJECT_NAME
+   mv ./testproject.ts ./$PROJECT_NAME.ts
+   mv ./tests/testproject.test.ts ./tests/$PROJECT_NAME.test.ts
    ```
 
 4. Find and replace the string `tstemplate` in the project folder with your project name:
@@ -64,10 +61,10 @@ To get started:
    git init && git add . && git commit -m "initial commit"
    ```
 
-7. Install `npm` dependencies, run `build` and `docs` scripts:
+7. Install `npm` dependencies, run `build`, `docs` and `test` scripts:
    
    ```sh
-   npm install && npm run build:docs
+   npm install && npm run build:docs && npm test
    ```
 
 ## Install
