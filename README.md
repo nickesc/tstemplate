@@ -22,7 +22,7 @@
 
 ## About `tstemplate`
 
-Steps to get started:
+To get started:
 1. Clone this repository:
 
    ```sh
@@ -35,30 +35,39 @@ Steps to get started:
    PROJECT_NAME=replace_with_project_name
    ```
 
-3. Find and replace the string `tstemplate` in the project folder with your project name to get started quickly:
+3. Rename `tstemplate.ts` and `tests/tstemplate.test.ts`, and the folder:
    
    ```sh
-   grep -rl 'tstemplate' "./tstemplate" --exclude-dir={.git,node_modules} | xargs sed -i '' 's/tstemplate/'$PROJECT_NAME'/g'
-   ```
-
-4. Remove the `git` repository:
-   ```sh
-   rm -rf ./tstemplate/.git
-   ```
-
-5. Rename `tstemplate.ts` and `tests/tstemplate.test.ts`, and replace `tstemplate` with your repository name:
-   ```sh
-   mv ./tstemplate/tstemplate.ts ./tstemplate/$PROJECT_NAME.ts
-   mv ./tstemplate/tests/tstemplate.test.ts ./tstemplate/tests/$PROJECT_NAME.test.ts
    mv ./tstemplate ./$PROJECT_NAME
+   cd ./$PROJECT_NAME
+
+   mv ./tstemplate.ts ./$PROJECT_NAME.ts
+   mv ./tests/tstemplate.test.ts ./tests/$PROJECT_NAME.test.ts
+   
+   ```
+
+4. Find and replace the string `tstemplate` in the project folder with your project name:
+   
+   ```sh
+   cd $PROJECT_NAME && grep -rl 'tstemplate' . --exclude-dir={.git,node_modules} | xargs sed -i '' 's/tstemplate/'$PROJECT_NAME'/g'
+   ```
+
+5. Remove the `git` repository:
+   
+   ```sh
+   rm -rf .git
    ```
 
 6. Initialize a new `git` repository
+   
    ```sh
-   cd $PROJECT_NAME
-   git init
-   git add .
-   git commit -m "initial commit"
+   git init && git add . && git commit -m "initial commit"
+   ```
+
+7. Install `npm` dependencies, run `build` and `docs` scripts:
+   
+   ```sh
+   npm install && npm run build:docs
    ```
 
 ## Install
