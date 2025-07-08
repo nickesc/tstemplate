@@ -23,8 +23,43 @@
 ## About `tstemplate`
 
 Steps to get started:
-1. Find and replace the string `tstemplate` in the project folder with your repository name to get started quickly.
-2. rename `./tstemplate.ts` and `./tests/tstemplate.test.ts`, and replace `tstemplate` with your repository name
+1. Clone this repository:
+
+   ```sh
+   git clone https://github.com/nickesc/tstemplate.git
+   ```
+
+2. Define the project name:
+   
+   ```sh
+   PROJECT_NAME=replace_with_project_name
+   ```
+
+3. Find and replace the string `tstemplate` in the project folder with your project name to get started quickly:
+   
+   ```sh
+   grep -rl 'tstemplate' "./tstemplate" --exclude-dir={.git,node_modules} | xargs sed -i '' 's/tstemplate/'$PROJECT_NAME'/g'
+   ```
+
+4. Remove the `git` repository:
+   ```sh
+   rm -rf ./tstemplate/.git
+   ```
+
+5. Rename `tstemplate.ts` and `tests/tstemplate.test.ts`, and replace `tstemplate` with your repository name:
+   ```sh
+   mv ./tstemplate/tstemplate.ts ./tstemplate/$PROJECT_NAME.ts
+   mv ./tstemplate/tests/tstemplate.test.ts ./tstemplate/tests/$PROJECT_NAME.test.ts
+   mv ./tstemplate ./$PROJECT_NAME
+   ```
+
+6. Initialize a new `git` repository
+   ```sh
+   cd $PROJECT_NAME
+   git init
+   git add .
+   git commit -m "initial commit"
+   ```
 
 ## Install
 
